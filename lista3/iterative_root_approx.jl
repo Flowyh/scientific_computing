@@ -189,13 +189,9 @@ module IterativeRootApprox
 
     x1::Float64 = 0.0
     for iteration::Int = 1:maxit
-      if (abs(pf(x0)) <= epsilon) # x0 nie jest pierwiastkiem jednokrotnym
-        return IRAR_ERROR_CODE_TWO
-      end
-
       x1 = x0 - (fx / pf(x0))
       fx = f(x1)
-      
+  
       if (abs(x1 - x0) <= delta || abs(fx) <= epsilon)
         return IRAResults(x1, fx, iteration, 0)
       end
