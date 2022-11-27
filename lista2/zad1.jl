@@ -44,8 +44,8 @@ end
 
 
 """
-    sum_forward(x::Vector{Float32}, y::Vector{Float32})
     sum_forward(x::Vector{Float64}, y::Vector{Float64})
+    
 Calculates scalar products of two Float32 or Float64 vectors (with same lengths)
 using "summing forward" strategy.
 It basically sums partial products from the first elements of both vectors
@@ -72,8 +72,8 @@ end
 
 
 """
-    sum_backwards(x::Vector{Float32}, y::Vector{Float32})
     sum_backwards(x::Vector{Float64}, y::Vector{Float64})
+
 Calculates scalar products of two Float32 or Float64 vectors (with same lengths)
 using "summing backwards" strategy.
 It basically sums partial products from the lest elements of both vectors
@@ -100,8 +100,8 @@ end
 
 
 """
-    sum_largest_to_smallest(x::Vector{Float32}, y::Vector{Float32})
     sum_largest_to_smallest(x::Vector{Float64}, y::Vector{Float64})
+
 Calculates scalar products of two Float32 or Float64 vectors (with same lengths)
 using "summing largest to smallest" strategy.
 Positive partial products are summed from the largest to the smallest.
@@ -127,8 +127,8 @@ end
 
 
 """
-    sum_smallest_to_largest(x::Vector{Float32}, y::Vector{Float32})
     sum_smallest_to_largest(x::Vector{Float64}, y::Vector{Float64})
+
 Calculates scalar products of two Float32 or Float64 vectors (with same lengths)
 using "summing smallest to largest" strategy.
 Positive partial products are summed from the smallest to the largest.
