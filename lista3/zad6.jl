@@ -136,7 +136,7 @@ function newton_tests()
   println("======Testy metody Newtona dla f2 i x0 > 1======")
   # Testowanie Newtona dla f2 i x > 1
   for i = 2:20
-    newton = mstycznych(f2, df1, Float64(i), DELTA, EPSILON, 1000)
+    newton = mstycznych(f2, df2, Float64(i), DELTA, EPSILON, 1000)
     pretty_results_print(newton, "Metoda stycznych")
   end
   println("================================================")
@@ -158,7 +158,7 @@ function newton_latex()
   println("TESTY DLA f2")
   # Testowanie Newtona dla f2 i x > 1
   for i = 2:20
-    newton = mstycznych(f2, df1, Float64(i), DELTA, EPSILON, 1000)
+    newton = mstycznych(f2, df2, Float64(i), DELTA, EPSILON, 1000)
     print("\$$i\$ & ")
     results_latex_row(newton)
   end
@@ -171,7 +171,7 @@ function main(args::Array{String})
   f1_test()
   f2_test()
   newton_tests()
-  # newton_tests()
+  newton_tests()
   # newton_latex()
 end
 
